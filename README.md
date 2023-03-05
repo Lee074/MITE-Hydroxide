@@ -1,3 +1,3 @@
 # MITE-Hydroxide
 
-## 科技强国
+科技强国
