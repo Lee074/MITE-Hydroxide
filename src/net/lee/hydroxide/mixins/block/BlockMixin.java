@@ -1,6 +1,7 @@
 package net.lee.hydroxide.mixins.block;
 
-import net.lee.hydroxide.module.modules.Modules;
+import net.lee.hydroxide.Hydroxide;
+import net.lee.hydroxide.module.modules.world.Xray;
 import net.minecraft.Block;
 import net.minecraft.IBlockAccess;
 import net.minecraft.Minecraft;
@@ -15,7 +16,7 @@ import static net.xiaoyu233.fml.util.ReflectHelper.dyCast;
 public class BlockMixin {
     @Overwrite
     public boolean a(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
-        if (Modules.xray) {
+        if (Hydroxide.moduleManger.getByClass(Xray.class).isEnable()) {
             int block_id = par1IBlockAccess.getBlockId(par2, par3, par4);
             if (block_id == Block.oreCopper.blockID || block_id == Block.oreSilver.blockID || block_id == Block.oreGold.blockID ||
                     block_id == Block.oreIron.blockID || block_id == Block.oreMithril.blockID || block_id == Block.oreAdamantium.blockID ||

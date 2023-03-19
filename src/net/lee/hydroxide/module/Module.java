@@ -1,14 +1,26 @@
 package net.lee.hydroxide.module;
 
 public class Module {
-    private final String name;
-    private boolean enable;
-    private int key;
+    protected final String name;
+    protected boolean enable;
+    protected Category category;
+    protected int key;
 
-    //, boolean enable
-    public Module(String name) {
+    public Module(String name, Category category) {
         this.name = name;
-        //this.enable = enable;
+        this.category = category;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
 
     public String getName() {
@@ -21,32 +33,31 @@ public class Module {
 
     public void setEnable(boolean enable) {
         this.enable = enable;
+
+        if (enable) {
+            enable();
+        } else {
+            disable();
+        }
     }
-
-
-    public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
-
-
-    public void draw() {
+    public void enable() {
 
     }
 
-    public void render(float partialTicks) {
+    public void disable() {
 
     }
 
     //ok
-    public void update() {
+    public void draw() {
 
     }
+    //OK
+    public void render(float partialTicks) {
 
-    public void key(int key) {
+    }
+    //ok
+    public void update() {
 
     }
 }
