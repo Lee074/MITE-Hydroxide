@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "name": "Hydroxide Client",
+  "id": "hydroxide-client",
+  "version": "${version}",
+  "description": "Easy",
+  "authors": ["Huix"],
+  "environment": "client",
+  "entrypoints": {
+    "CLIENT": [
+      "ink.hydroxide.client.HydroxideClient"
+    ]
+  },
+  "mixins": [
+    "ohclient.mixin.json"
+  ],
+  "depends": {
+    "fishmodloader": ">=3.2.0"
+  },
+  "accessWidener": "ohclient.accesswidener"
+}
+
