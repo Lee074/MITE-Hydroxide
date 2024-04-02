@@ -1,5 +1,7 @@
-# 项目排除路径
 /out/
 /libs/
 /.idea/
-/MITE R196-Hydroxide/
+/build
+/run
+/.gradle
+
