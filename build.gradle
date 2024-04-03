@@ -22,7 +22,7 @@ loom {
 	mergedMinecraftJar()
 	setFML(new File("E:\\Minecraft\\MITE R196\\.minecraft\\libraries\\net\\xiaoyu233\\fishmodloader\\fishmodloader\\v3.2.1\\FishModLoader-v3.2.1.jar"))
 	mods {
-		"MITE-ITE" {
+		"Hydroxide" {
 			sourceSet sourceSets.main
 		}
 	}

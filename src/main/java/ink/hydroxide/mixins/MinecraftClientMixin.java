@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(Minecraft.class)
 public class MinecraftClientMixin {
-
     @Overwrite
     public static boolean inDevMode() {
         return true;
